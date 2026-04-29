@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    background: #e89c97;
+}
+
+/* TARJETA */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    width: 600px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TITULO CENTRADO */
+.titulo {
+    text-align: center;
+    color: #ff4e50;
+    margin-bottom: 20px;
+}
+
+/* NOMBRE A LA IZQUIERDA */
+.nombre {
+    text-align: left;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* CONTENIDO FLEX */
+.contenido {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* TEXTO */
+.mensaje {
+    flex: 1;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* IMAGEN */
+img {
+    width: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
