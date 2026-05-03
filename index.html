@@ -2,22 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Acceso especial 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Especial - 10 de Mayo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Contenedor para la lluvia de flores -->
+    <div id="petals-container"></div>
 
-<div class="login-card">
-    <h2>🌸 Acceso especial 🌸</h2>
+    <div class="login-card">
+        <div class="floral-header">
+            <span class="flower-icon">🌸</span>
+            <h1>¡Feliz Día, Mamá!</h1>
+            <p>Ingresa para ver tu sorpresa especial</p>
+        </div>
 
-    <input type="text" id="usuario" placeholder="Usuario">
-    <input type="password" id="password" placeholder="Contraseña">
+        <form onsubmit="event.preventDefault(); login();">
+            <div class="input-group">
+                <input type="text" id="usuario" required autocomplete="off">
+                <label>Nombre de usuario</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label>Contraseña mágica</label>
+            </div>
+            <p id="error"></p>
+            <button type="submit" class="btn-floral">Entrar con amor</button>
+        </form>
+    </div>
 
-    <button onclick="login()">Entrar</button>
-
-    <p id="error"></p>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
