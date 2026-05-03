@@ -1,0 +1,86 @@
+/* Configuración General */
+body {
+    background-color: #fce4ec; /* Un rosa muy clarito de fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Tarjeta Principal */
+.card {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #f8bbd0;
+}
+
+/* Títulos */
+.titulo {
+    color: #d81b60;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nombre {
+    color: #ad1457;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Contenedor del Mensaje */
+.mensaje {
+    text-align: justify; /* Para que el texto se vea ordenado */
+    line-height: 1.6;    /* Espaciado entre líneas para que no canse la vista */
+    color: #444;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.mensaje p {
+    margin-bottom: 15px; /* Espacio entre cada párrafo */
+}
+
+/* Estilo de la Imagen */
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #fce4ec;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
+}
+
+/* Decoración extra para negritas */
+strong {
+    color: #d81b60;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+    .titulo {
+        font-size: 1.2rem;
+    }
+    .nombre {
+        font-size: 1.6rem;
+    }
+}

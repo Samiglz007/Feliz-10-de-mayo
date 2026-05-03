@@ -57,6 +57,10 @@ function login() {
         "tete":{
             password:"2020",
             pagina:"Usuarios/tt/tt.html"
+        },
+        "mayita":{
+            password:"3030",
+            pagina:"Usuarios/zoe/zoe.html"
         }
     };
 
