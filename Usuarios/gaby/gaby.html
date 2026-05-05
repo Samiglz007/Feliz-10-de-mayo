@@ -2,43 +2,124 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gaby 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Gaby 💖</title>
     <link rel="stylesheet" href="gaby.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- 7 Checkboxes para las 7 hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Gaby 💖</h1>
-
-    <!-- NOMBRE -->
-    <h2 class="nombre">Gaby</h2>
-
-    <!-- CONTENIDO -->
-    <div class="contenido">
-
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida Gaby,</strong></p>
+        <div class="book">
             
-            <p>Hoy, en este 10 de mayo, no podía dejar de escribirte. Aunque sé que es un día para celebrar la maternidad, para mí es también la oportunidad perfecta para agradecerte por esa forma tan generosa en la que cuidas y guías a quienes te rodeamos.</p>
-            
-            <p>A veces la vida nos regala personas que son como faros, y tú has sido eso para mí. Gracias por ser esa amiga mayor que siempre tiene la palabra justa, el consejo que me aterriza y esa vibración tan especial que transmite paz con solo estar presente. He aprendido tanto de tu experiencia y de tu manera de ver el mundo; gracias por abrirme tu corazón y por compartir conmigo esa sabiduría que solo dan los años y la buena voluntad.</p>
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para Gaby</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda al abrir -->
+                    <div class="photo-frame"><img src="/Fotos/gaby.jpg"></div>
+                </div> 
+            </div>
 
-            <p>Admiro profundamente la madre que eres y la mujer tan increíble en la que te has convertido. Gracias por contagiarme de tu energía positiva, por escucharme sin juzgar y por estar ahí en los momentos en que más he necesitado un norte. Eres una inspiración para mí y un ejemplo de que se puede ser fuerte y dulce al mismo tiempo.</p>
-            
-            <p>Deseo que hoy pases un día lleno de luz, rodeada de tu familia y de todo el amor que tú siembras en los demás todos los días. ¡Te quiero muchísimo y te admiro aún más!</p>
-            
-            <p><strong>¡Feliz Día de las Madres!</strong></p>
+            <!-- HOJA 2: BLANCO (DER) -> PÁRRAFO 1 (IZQ) -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2">
+                    <!-- Lado derecho blanco al abrir -->
+                </label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>Querida Gaby, en este 10 de mayo, no podía dejar de escribirte para agradecerte por esa forma tan generosa en la que cuidas a quienes te rodeamos.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 3: PÁRRAFO 2 (DER) -> PÁRRAFO 3 (IZQ) -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Gracias por ser esa amiga mayor que siempre tiene la palabra justa, el consejo que me aterriza y esa vibración que transmite paz.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>A veces la vida nos regala personas que son como faros, y tú has sido eso para mí. He aprendido tanto de tu experiencia.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 (DER) -> PÁRRAFO 5 (IZQ) -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Admiro profundamente la madre que eres y la mujer tan increíble en la que te has convertido. Gracias por tu energía positiva.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Gracias por abrirme tu corazón y por compartir conmigo esa sabiduría que solo dan los años y la buena voluntad.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 (DER) -> PÁRRAFO 7 (IZQ) -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Eres una inspiración para mí y un ejemplo de que se puede ser fuerte y dulce al mismo tiempo. Gracias por escucharme siempre.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Gracias por estar ahí en los momentos en que más he necesitado un norte. Tu apoyo ha sido fundamental.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: PÁRRAFO FINAL (DER) -> FRASE DESPEDIDA (IZQ) -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres! Deseo que hoy pases un día lleno de luz y de todo el amor que tú siembras. Te quiero muchísimo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Con todo mi amor y admiración! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL (DERECHA) -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="/Fotos/gaby.jpg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN -->
-        <img src="/Fotos/gaby.jpg" alt="Foto con Gaby">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="gaby.js"></script>
 </body>
 </html>

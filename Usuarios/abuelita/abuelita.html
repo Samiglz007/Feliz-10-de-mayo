@@ -2,42 +2,120 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Abuelita 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Abuelita 💖</title>
     <link rel="stylesheet" href="abuelita.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Abuelita 💖</h1>
+        <div class="book">
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para mi Abuelita</h1>
+                    </div>
+                </label>
+                <div class="back page-crema"></div> 
+            </div>
 
-    <!-- NOMBRE -->
-    <h2 class="nombre">Abuelita</h2>
+            <!-- HOJA 2: FOTO INICIAL (DER) -> PÁRRAFO 1 (IZQ) -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2">
+                    <div class="photo-frame"><img src="/Fotos/abuelita.jpg" alt="Abuelita"></div>
+                </label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida abuelita, en este 10 de mayo, no quería dejar pasar la oportunidad de decirte cuánto te admiro y cuánto significas para mí.</p>
+                    </div>
+                </label>
+            </div>
 
-    <!-- CONTENIDO -->
-    <div class="contenido">
+            <!-- HOJA 3: PÁRRAFO 2 (DER) -> PÁRRAFO 3 (IZQ) -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>A veces las palabras se quedan cortas para agradecerte por ser esa raíz fuerte que sostiene a toda nuestra familia, pero hoy quiero intentarlo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Gracias por ser "mamá por partida doble". Gracias por haber cuidado y guiado a mis padres con tanto amor y entrega.</p>
+                    </div>
+                </label>
+            </div>
 
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida abuelita,</strong></p>
-            
-            <p>En este 10 de mayo, no quería dejar pasar la oportunidad de decirte cuánto te admiro y cuánto significas para mí. A veces las palabras se quedan cortas para agradecerte por ser esa raíz fuerte que sostiene a toda nuestra familia, pero hoy quiero intentarlo.</p>
-            
-            <p>Gracias por ser "mamá por partida doble". Gracias por haber cuidado y guiado a mis padres con tanto amor, porque gracias a ese esfuerzo y a esa entrega, hoy yo estoy aquí. Eres el ejemplo vivo de lo que significa el amor incondicional; ese que no se cansa, que siempre tiene un consejo sabio bajo la manga y que parece curarlo todo con solo un abrazo o una sonrisa.</p>
+            <!-- HOJA 4: PÁRRAFO 4 (DER) -> PÁRRAFO 5 (IZQ) -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Eres el ejemplo vivo del amor incondicional; ese que no se cansa, que siempre tiene un consejo sabio y que parece curarlo todo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Me siento una persona muy afortunada por tenerte en mi vida, por escuchar tus historias y por aprender de tu fortaleza.</p>
+                    </div>
+                </label>
+            </div>
 
-            <p>Me siento una persona muy afortunada por tenerte en mi vida, por escuchar tus historias y por aprender de tu fortaleza. Eres nuestra guía y el corazón de este hogar. Le pido a la vida que nos permita compartir muchísimos momentos más, para seguir disfrutando de tu compañía que es, sin duda, mi lugar favorito en el mundo.</p>
-            
-            <p><strong>¡Feliz Día de las Madres, abuelita!</strong><br>
-            Te amo con todo mi corazón. Te quiero muchísimo 💖</p>
+            <!-- HOJA 5: PÁRRAFO 6 (DER) -> PÁRRAFO 7 (IZQ) -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Eres nuestra guía y el corazón de este hogar. Le pido a la vida que nos permita compartir muchísimos momentos más.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Seguir disfrutando de tu compañía es, sin duda, mi lugar favorito en el mundo. Eres increíble.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE (DER) -> FRASE FINAL (IZQ) -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres, abuelita! Te amo con todo mi corazón. Te quiero muchísimo 💖</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">Con todo mi amor para ti... 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL (DERECHA) -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="/Fotos/abuelita.jpg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN -->
-        <img src="../../Fotos/abuelita.jpeg" alt="Foto con mi abuelita">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="abuelita.js"></script>
 </body>
 </html>
