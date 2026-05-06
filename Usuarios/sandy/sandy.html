@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para quien me conoce el alma 💖</title>
+    <link rel="stylesheet" href="sandy.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- 7 Checkboxes para las 7 hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
+
+        <div class="book">
+            
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>A mi refugio seguro</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda -->
+                    <div class="photo-frame"><img src="../../Fotos/persona.jpeg" alt="Nosotros"></div>
+                </div> 
+            </div>
+
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">H</span>ay personas que ven nuestra superficie, pero tú has decidido quedarte a conocer mis profundidades, mis sombras y mis silencios.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>No tengo que explicarte mis miedos porque tú ya los has sentido conmigo. Me conoces tan bien que sabes leer mis ojos antes de que mis labios pronuncien una palabra.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Gracias por no asustarte cuando las cosas se pusieron difíciles y por ser esa persona que sabe exactamente qué consejo darme o cuándo solo necesito un abrazo.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Contigo no necesito filtros ni máscaras. Contigo puedo ser yo mismo, con mis errores y mis locuras, sabiendo que tu aceptación es total y sincera.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Tu presencia en mi vida es el recordatorio constante de que no estoy solo en este camino. Eres mi norte cuando me siento perdido.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Valoro cada risa compartida, pero valoro aún más esos momentos en los que tu apoyo fue mi única fuerza para levantarme y seguir adelante.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Agradezco al destino por habernos cruzado y a ti por decidir quedarte a mi lado, entendiendo cada fibra de mi historia y de mi corazón.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE DESPEDIDA -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>Gracias por conocerme el alma y por amarme de la forma más pura que existe. Eres una persona imprescindible para mí. ¡Te quiero!</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Gracias por ser tú! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/persona.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
+</div>
+
+<script src="sandy.js"></script>
+</body>
+</html>

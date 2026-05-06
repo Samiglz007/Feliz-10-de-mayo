@@ -79,6 +79,11 @@ function login() {
         "leticia":{
             password:"5050",
             pagina:"Usuarios/leticia/leticia.html"
+        },
+
+        "sandy":{
+            password:"6161",
+            pagina:"Usuarios/sandy/sandy.html"
         }
     };
 
