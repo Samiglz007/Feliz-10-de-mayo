@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Mamá 💖</title>
+    <link rel="stylesheet" href="leticia.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
+
+        <div class="book">
+            
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para la mejor Mamá</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda -->
+                    <div class="photo-frame"><img src="/Fotos/leticia.jpeg" alt="Mamá"></div>
+                </div> 
+            </div>
+
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">N</span>o encuentro las palabras adecuadas para agradecerte por todas las cosas que haces todos los días por mí. Tu entrega silenciosa es lo que me sostiene.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Eres mi apoyo incondicional y has sido mi ejemplo más puro de lo que significa amar sin límites. Gracias por ser mi guía cuando el camino se pone oscuro.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>No conozco a nadie tan fuerte y valiente como tú. Admiro esa capacidad tuya de enfrentar cualquier reto con la cabeza en alto y el corazón dispuesto.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Has sabido transformar mis miedos en seguridad y mis dudas en certezas. Tu sabiduría me ha enseñado más sobre la vida que cualquier otra cosa en este mundo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Agradezco tanto la dicha de llamarte mamá. Es un honor y un privilegio que la vida me haya puesto bajo tu cuidado y tu ternura infinita.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Eres mi refugio seguro y mi hogar emocional. No importa a dónde me lleve la vida, sé que en ti siempre encontraré paz y un abrazo que lo cura todo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Gracias por creer en mí incluso cuando yo mismo dudaba, por tu paciencia y por enseñarme que la bondad es la fuerza más poderosa de todas.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE FINAL -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>Te quiero con toda mi alma, mamá. Gracias por ser mi luz hoy y siempre. Que la vida te devuelva todo el amor que nos das.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Te quiero muchísimo! ❤️</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="/Fotos/leticia.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
+</div>
+
+<script src="leticia.js"></script>
+</body>
+</html>

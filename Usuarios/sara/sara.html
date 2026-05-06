@@ -2,44 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sara 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Sara 💖</title>
     <link rel="stylesheet" href="sara.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Sara 💖</h1>
+        <div class="book">
+            
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para mi Hermana</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda -->
+                    <div class="photo-frame"><img src="../../Fotos/sara.jpeg" alt="Sara"></div>
+                </div> 
+            </div>
 
-    <!-- NOMBRE -->
-    <h2 class="nombre">Sara</h2>
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida hermana, hoy, en este 10 de mayo, me detengo a pensar en lo increíble que ha sido verte transformarte en la mujer y la madre que eres hoy.</p>
+                    </div>
+                </label>
+            </div>
 
-    <!-- CONTENIDO -->
-    <div class="contenido">
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Para mí, siempre serás mi compañera de vida, pero ahora que te veo con tu niña, mi admiración por ti ha crecido de una forma que no puedo explicar.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Ser madre no es una tarea fácil, y aunque sé que hay días de cansancio, quiero que sepas que lo estás haciendo de maravilla. Eres increíble.</p>
+                    </div>
+                </label>
+            </div>
 
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida hermana,</strong></p>
-            
-            <p>Hoy, en este 10 de mayo, me detengo a pensar en lo increíble que ha sido verte crecer y transformarte en la mujer y la madre que eres hoy. Para mí, siempre serás mi compañera de vida, pero ahora que te veo con tu niña, mi admiración por ti ha crecido de una forma que no puedo explicar.</p>
-            
-            <p>Ser madre no es una tarea fácil, y aunque sé que hay días de cansancio y retos, quiero que sepas que lo estás haciendo de maravilla. Veo tu entrega, tu paciencia y ese amor infinito que le das, y me llena de orgullo saber que mi sobrina tiene a la mejor guía del mundo.</p>
-            
-            <p>Eres valiente, eres fuerte y, sobre todo, eres el corazón de tu propio hogar, tal como mamá lo ha sido para nosotros. Gracias por ser un ejemplo para mí y por enseñarme que el amor de madre no tiene límites.</p>
-            
-            <p>Nunca olvides que, además de ser una mamá increíble, sigues teniendo a tu hermano aquí para apoyarte, escucharte y celebrar cada uno de tus logros.</p>
-            
-            <p><strong>¡Feliz Día de las Madres! Estoy muy orgulloso de ti.</strong><br>
-            Te quiero muchísimo 💖</p>
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Veo tu entrega, tu paciencia y ese amor infinito que le das; me llena de orgullo saber que mi sobrina tiene a la mejor guía del mundo a su lado.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Eres valiente, eres fuerte y, sobre todo, eres el corazón de tu propio hogar, tal como mamá lo ha sido siempre para todos nosotros.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Gracias por ser un ejemplo para mí y por enseñarme que el amor de madre no tiene límites. Tu esfuerzo diario es realmente inspirador.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Nunca olvides que sigues teniendo a tu hermano aquí para apoyarte, escucharte y celebrar cada uno de tus logros y alegrías.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE DESPEDIDA -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres! Estoy muy orgulloso de la mujer en la que te has convertido. Te mereces toda la felicidad del mundo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Te quiero muchísimo! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/sara.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN (Recuerda actualizar la ruta de la foto con Sara) -->
-        <img src="../../Fotos/sara.jpeg" alt="Foto con Sara">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="sara.js"></script>
 </body>
 </html>

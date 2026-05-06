@@ -2,43 +2,123 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Para mi gran amiga 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Zoe Airam 💖</title>
     <link rel="stylesheet" href="zoe.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas (7 en total) -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Feliz Día de las Madres 💖</h1>
-
-    <!-- NOMBRE -->
-    <h2 class="nombre">Zoe Airam</h2>
-
-    <!-- CONTENIDO -->
-    <div class="contenido">
-
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida amiga,</strong></p>
+        <div class="book">
             
-            <p>En este 10 de mayo, no podía dejar de escribirte algo que saliera directo del corazón. La vida me ha dado muchos regalos, pero uno de los más bonitos ha sido la oportunidad de conocerte y, sobre todo, de haber podido estar a tu lado durante toda tu etapa de embarazo.</p>
-            
-            <p>Fue un privilegio ser testigo de cómo te preparabas para recibir al <strong>"aferrado" de Karim</strong>. Ver tu fuerza, tus ilusiones y también tus miedos me hizo admirarte más que nunca. Karim no pudo haber elegido una mejor mamá; eres una mujer increíblemente valiente y entregada, y se nota en la forma en que lo cuidas y en cómo ha cambiado tu mundo desde que él llegó.</p>
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para Zoe Airam</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Espacio blanco al abrir -->
+                </div> 
+            </div>
 
-            <p>Gracias por permitirme ser parte de esta historia, por compartir conmigo los momentos dulces y los retos de esta nueva etapa. Admiro profundamente la madre en la que te has convertido y me llena de felicidad verlos juntos. Eres el ejemplo perfecto de que el amor de madre lo puede todo.</p>
-            
-            <p>Deseo que este día esté lleno de risas, de abrazos de Karim y de todo el amor que te mereces. Sabes que aquí siempre tendrás a alguien que te apoya y que celebra cada paso que dan juntos.</p>
-            
-            <p><strong>¡Feliz Día de las Madres! Te quiero muchísimo 💖</strong></p>
+            <!-- HOJA 2: FOTO INICIAL (DER) -> PÁRRAFO 1 (IZQ) -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2">
+                    <div class="photo-frame"><img src="/Fotos/zoe.jpeg" alt="Zoe y Karim"></div>
+                </label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida amiga, en este 10 de mayo, no podía dejar de escribirte algo que saliera directo del corazón por lo mucho que te admiro.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>La vida me ha dado muchos regalos, pero uno de los más bonitos ha sido acompañarte durante toda tu etapa de embarazo y verte florecer.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Fue un privilegio ser testigo de cómo te preparabas para recibir al "aferrado" de Karim. Ver tu fuerza y tus ilusiones me hizo admirarte más que nunca.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Karim no pudo haber elegido una mejor mamá; eres una mujer valiente y entregada, y se nota en la forma en que tu mundo cambió desde que él llegó.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Gracias por permitirme ser parte de esta historia y por compartir los retos de esta nueva etapa. Me llena de felicidad verlos siempre juntos.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Deseo que este día esté lleno de risas, de abrazos de Karim y de todo el amor que te mereces por ser el ejemplo perfecto de entrega.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Admiro profundamente la madre en la que te has convertido. Sabes que aquí siempre tendrás a alguien que celebra cada paso que dan juntos.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE FINAL (IZQ) -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres! Disfruta al máximo tu primer 10 de mayo con tu pequeño Karim. Te mereces lo más bonito del mundo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Te quiero muchísimo! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL (DER) -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="/Fotos/zoe.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN -->
-        <img src="/Fotos/zoe.jpeg" alt="Foto con mi amiga y Karim">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="zoe.js"></script>
 </body>
 </html>

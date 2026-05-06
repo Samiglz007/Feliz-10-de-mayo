@@ -2,44 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Rosy 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Rosy 💖</title>
     <link rel="stylesheet" href="rosy.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Rosy 💖</h1>
-
-    <!-- NOMBRE -->
-    <h2 class="nombre">Rosy</h2>
-
-    <!-- CONTENIDO -->
-    <div class="contenido">
-
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida Rosy,</strong></p>
+        <div class="book">
             
-            <p>Hoy, 10 de mayo, mi primer pensamiento es para ti. Aunque no compartimos la misma sangre, el destino me puso a tu lado y te convirtió en uno de los pilares más importantes de mi vida.</p>
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para Rosy</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda al abrir -->
+                    <div class="photo-frame"><img src="../../Fotos/rosy.jpeg"></div>
+                </div> 
+            </div>
 
-            <p>Quiero agradecerte desde lo más profundo de mi ser por no haberme soltado la mano. Gracias por estar conmigo en esta última tragedia que viví y por haber sido mi apoyo también el año pasado, cuando sentía que el mundo se me venía abajo. En mis momentos más difíciles, cuando no encontraba salida, tu presencia fue mi refugio y tu fuerza fue el motor que me ayudó a levantarme.</p>
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida Rosy, hoy, 10 de mayo, mi primer pensamiento es para ti. El destino te convirtió en uno de los pilares más importantes de mi vida.</p>
+                    </div>
+                </label>
+            </div>
 
-            <p>Admiro profundamente cada consejo que me has dado; incluso valoro esos regaños que me han hecho reaccionar, porque sé que vienen de un corazón que genuinamente se preocupa por mí y que quiere verme bien. Tu sabiduría y esa manera tan especial de ver la vida me han enseñado más que cualquier libro. Gracias por tu paciencia, por tu tiempo y por ese amor incondicional que me brindas sin pedir nada a cambio.</p>
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Quiero agradecerte por no haberme soltado la mano. Gracias por estar conmigo en esta última tragedia y por ser mi apoyo cuando el mundo se me venía abajo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>En mis momentos más difíciles, cuando no encontraba salida, tu presencia fue mi refugio y tu fuerza fue el motor que me ayudó a levantarme.</p>
+                    </div>
+                </label>
+            </div>
 
-            <p>Eres una mujer extraordinaria y un ejemplo de lo que significa ser una madre en toda la extensión de la palabra: alguien que cuida, que guía y que sana. Le pido a la vida que me permita tenerte cerca por muchísimos años más para intentar devolverte un poquito de todo el bien que me has hecho.</p>
-            
-            <p><strong>¡Feliz Día de las Madres!</strong><br>
-            Te quiero con toda el alma y te estaré eternamente agradecido.</p>
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Admiro cada consejo y valoro esos regaños que me han hecho reaccionar, porque sé que vienen de un corazón que genuinamente se preocupa por mí.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Tu sabiduría me ha enseñado más que cualquier libro. Gracias por tu paciencia, por tu tiempo y por ese amor incondicional que me brindas.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Eres una mujer extraordinaria y un ejemplo de lo que significa ser una madre: alguien que cuida, que guía y que sana.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Le pido a la vida que me permita tenerte cerca por muchísimos años más para intentar devolverte un poquito de todo el bien que me has hecho.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE FINAL -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres! Te quiero con toda el alma y te estaré eternamente agradecido por ser mi norte y mi fortaleza.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Con toda mi alma y gratitud! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/rosy.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN (Recuerda poner la ruta correcta de la foto de Rosy) -->
-        <img src="../../Fotos/rosy.jpeg" alt="Foto con Rosy">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="rosy.js"></script>
 </body>
 </html>

@@ -1,56 +1,128 @@
 body {
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial;
-    background: #e89c97;
+    background: #fdf5e6;
+    font-family: "Georgia", serif;
 }
 
-/* TARJETA */
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 25px;
-    width: 600px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* TITULO CENTRADO */
-.titulo {
-    text-align: center;
-    color: #ff4e50;
-    margin-bottom: 20px;
-}
-
-/* NOMBRE A LA IZQUIERDA */
-.nombre {
-    text-align: left;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* CONTENIDO FLEX */
-.contenido {
+.main-container {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-/* TEXTO */
-.mensaje {
-    flex: 1;
-    font-size: 15px;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
+.book-wrapper {
+    width: 380px;
+    height: 520px;
+    perspective: 2000px;
+    transition: transform 1s ease-in-out;
 }
 
-/* IMAGEN */
-img {
-    width: 200px;
-    border-radius: 15px;
-    object-fit: cover;
+input { display: none; }
+
+.book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
 }
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 45px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: inset 3px 0 15px rgba(0,0,0,0.1);
+}
+
+.page-crema { background: #fffef0; border: 1px solid #dcd1b3; }
+.back { transform: rotateY(180deg); }
+
+.cover-cafe {
+    background: #5d4037;
+    border: 1px solid #3e2723;
+    border-left: 15px solid #3e2723;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.etiqueta-titulo {
+    background: #f1c40f;
+    padding: 20px;
+    border: 2px solid #d4ac0d;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    text-align: center;
+    width: 85%;
+}
+
+.etiqueta-titulo h1 {
+    font-family: "Apple Chancery", "Segoe Script", cursive;
+    font-size: 30px;
+    font-style: italic;
+    color: #3e2723;
+    margin: 0;
+}
+
+.content { height: 100%; display: flex; align-items: center; justify-content: center; }
+p { text-align: justify; line-height: 1.8; font-size: 18px; color: #3e2723; margin: 0; }
+
+.capitular {
+    float: left;
+    font-family: "Segoe Script", cursive;
+    font-size: 55px;
+    color: #5d4037;
+    margin-right: 10px;
+}
+
+.final-izquierda {
+    font-family: "Segoe Script", "Apple Chancery", cursive;
+    font-size: 28px;
+    color: #5d4037;
+    text-align: center;
+    width: 100%;
+}
+
+img { width: 100%; height: 100%; object-fit: cover; }
+.photo-frame { width: 100%; height: 100%; border: 5px solid #f3e5ab; }
+
+/* Giros y Capas */
+#c1:checked ~ .book #p1 { transform: rotateY(-180deg); z-index: 10; }
+#c2:checked ~ .book #p2 { transform: rotateY(-180deg); z-index: 11; }
+#c3:checked ~ .book #p3 { transform: rotateY(-180deg); z-index: 12; }
+#c4:checked ~ .book #p4 { transform: rotateY(-180deg); z-index: 13; }
+#c5:checked ~ .book #p5 { transform: rotateY(-180deg); z-index: 14; }
+#c6:checked ~ .book #p6 { transform: rotateY(-180deg); z-index: 15; }
+#c7:checked ~ .book #p7 { transform: rotateY(-180deg); z-index: 16; }
+
+#p1 { z-index: 7; } #p2 { z-index: 6; } #p3 { z-index: 5; }
+#p4 { z-index: 4; } #p5 { z-index: 3; } #p6 { z-index: 2; }
+#p7 { z-index: 1; }
+
+.button-controls { display: flex; gap: 20px; }
+button {
+    padding: 10px 25px;
+    background: #5d4037;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover { background: #3e2723; }

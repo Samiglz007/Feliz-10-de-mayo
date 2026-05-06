@@ -2,41 +2,123 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>TT 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para TT 💖</title>
     <link rel="stylesheet" href="tt.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Tete 💖</h1>
-
-    <!-- NOMBRE -->
-    <h2 class="nombre">Tete</h2>
-
-    <!-- CONTENIDO -->
-    <div class="contenido">
-
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida TT,</strong></p>
+        <div class="book">
             
-            <p>En este 10 de mayo, además de felicitarla, quería hacerle llegar un agradecimiento que nace del corazón. A veces, en el día a día del trabajo, no nos detenemos a decir lo que realmente sentimos, pero hoy es el momento perfecto para hacerlo.</p>
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para mi jefa TT</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Espacio en blanco al abrir -->
+                </div> 
+            </div>
 
-            <p>Quiero agradecerle profundamente por haber sido la persona que creyó en mí cuando apenas comenzaba. Gracias por abrirme las puertas de su empresa y, sobre todo, por darme la oportunidad de crecer bajo su guía. Para mí, usted no es solo una jefa, sino un ejemplo de admiración; ver la pasión con la que lidera este proyecto y el amor con el que cuida de su familia me ha enseñado que, con esfuerzo y corazón, no hay metas inalcanzables.</p>
+            <!-- HOJA 2: FOTO INICIAL (DER) -> PÁRRAFO 1 (IZQ) -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2">
+                    <div class="photo-frame"><img src="../../Fotos/tt.jpeg" alt="TT"></div>
+                </label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida TT, en este 10 de mayo, además de felicitarla, quería hacerle llegar un agradecimiento que nace directamente del corazón.</p>
+                    </div>
+                </label>
+            </div>
 
-            <p>Gracias por ser una mujer que inspira, que impulsa a los demás a ser mejores y que demuestra que el éxito más grande es el que se comparte. Espero que hoy se sienta muy celebrada y rodeada de todo el amor de sus hijos, porque una madre con su fortaleza y generosidad merece solo lo mejor.</p>
-            
-            <p><strong>¡Feliz Día de las Madres, con todo mi cariño y gratitud!</strong></p>
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>A veces no nos detenemos a decir lo que realmente sentimos, pero hoy quiero agradecerle profundamente por haber creído en mí cuando apenas comenzaba.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Gracias por abrirme las puertas de su empresa y por darme la oportunidad de crecer bajo su guía. Usted es, para mí, un ejemplo de admiración.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Ver la pasión con la que lidera y el amor con el que cuida de su familia me ha enseñado que con corazón no hay metas inalcanzables.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Usted inspira e impulsa a los demás a ser mejores. Demuestra que el éxito más grande es aquel que se comparte con generosidad.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Espero que hoy se sienta muy celebrada y rodeada del amor de sus hijos, porque una madre con su fortaleza merece solo lo mejor del mundo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Gracias por sus enseñanzas y por ser ese motor que nos motiva día con día. Es un honor trabajar y aprender a su lado.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE DESPEDIDA (IZQ) -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres! Le deseo un día maravilloso lleno de alegrías. Gracias por la confianza y por el apoyo incondicional.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Con todo mi cariño y gratitud! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL (DER) -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/tt.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN (Recuerda actualizar la ruta de la foto con TT) -->
-        <img src="../../Fotos/tt.jpeg" alt="Foto con TT">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="tt.js"></script>
 </body>
 </html>

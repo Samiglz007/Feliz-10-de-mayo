@@ -1,36 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Fati 💖</title>
-<link rel="stylesheet" href="fatima.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Fati 💖</title>
+    <link rel="stylesheet" href="fatima.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Fati 💖</h1>
+        <div class="book">
+            
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para Fati</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda -->
+                    <div class="photo-frame"><img src="../../Fotos/fati.jpeg" alt="Fati"></div>
+                </div> 
+            </div>
 
-    <!-- NOMBRE -->
-    <h2 class="nombre">Fati</h2>
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">M</span>i querida Fati, hoy te escribo desde el rincón más honesto de mi ser. Aunque no compartimos lazos de sangre, la vida me ha premiado con tu presencia.</p>
+                    </div>
+                </label>
+            </div>
 
-    <!-- CONTENIDO -->
-    <div class="contenido">
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Me conoces como pocos. Has estado en mis triunfos, pero sobre todo, has sido mi ancla cuando el mundo se sentía demasiado pesado. Has visto mis lágrimas y miedos sin juzgarme.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Tú sabes leer mis silencios y entender mis tormentas antes de que lleguen. Gracias por ser esa persona que simplemente está ahí, recordándome que no estoy solo.</p>
+                    </div>
+                </label>
+            </div>
 
-        <!-- TEXTO -->
-        <p class="mensaje">
-    
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>Eres esa figura que guía con dulzura pero con firmeza. En ti he encontrado un refugio seguro, una maestra de vida y un corazón inmenso que no tiene límites para cuidar.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Admiro la mujer que eres y esa luz que desprendes. Gracias por aceptarme con mis luces y mis sombras, ayudándome a pulir las partes de mí que más me costaba aceptar.</p>
+                    </div>
+                </label>
+            </div>
 
-    Te quiero muchísimo 💖
-</p>
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Hoy te celebro por esa esencia maternal que repartes con tanta generosidad. Eres una pieza fundamental en mi vida y no imagino mi camino sin tu guía y tu cariño.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Espero que este día sientas todo el amor que has sembrado. Mereces que la vida te devuelva multiplicado cada gesto de bondad y cada abrazo sanador que me has dado.</p>
+                    </div>
+                </label>
+            </div>
 
-        <!-- IMAGEN -->
-        <img src="#" alt="Foto con fati">
+            <!-- HOJA 6: CIERRE -> FRASE DESPEDIDA -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>Gracias por conocerme, por quererme y por ser ese faro en mi vida. Eres extraordinaria y soy afortunado de tenerte. ¡Feliz día!</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Te quiero muchísimo! 💖</p>
+                    </div>
+                </label>
+            </div>
 
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/fati.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
+        </div>
     </div>
 
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="fatima.js"></script>
 </body>
 </html>

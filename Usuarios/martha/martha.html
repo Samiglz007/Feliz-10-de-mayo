@@ -2,43 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Martha 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Martita 💖</title>
     <link rel="stylesheet" href="martha.css">
 </head>
 <body>
 
-<div class="card">
+<div class="main-container">
+    <div class="book-wrapper" id="book-container">
+        <!-- Controles de las hojas -->
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+        <input type="checkbox" id="c3">
+        <input type="checkbox" id="c4">
+        <input type="checkbox" id="c5">
+        <input type="checkbox" id="c6">
+        <input type="checkbox" id="c7">
 
-    <!-- TITULO -->
-    <h1 class="titulo">💖 Para Martha 💖</h1>
-
-    <!-- NOMBRE -->
-    <h2 class="nombre">Martha</h2>
-
-    <!-- CONTENIDO -->
-    <div class="contenido">
-
-        <!-- TEXTO DIVIDIDO EN PÁRRAFOS -->
-        <div class="mensaje">
-            <p><strong>Querida Martita,</strong></p>
+        <div class="book">
             
-            <p>En este 10 de mayo, quería dedicarte unas palabras que nacen de la admiración profunda que siento por ti. Hay personas que pasan por la vida, y hay personas que, como tú, dejan una huella imborrable por su calidad humana y su entereza.</p>
-            
-            <p>Te celebro hoy no solo por ser madre, sino por la mujer increíble que eres. Admiro enormemente esa capacidad que tienes para mantener la calma y la bondad incluso cuando las cosas se ponen difíciles. A pesar de los problemas o los retos que la vida te ha puesto enfrente, siempre buscas la manera de resolverlos, de salir adelante con la frente en alto y, lo más importante, sin perder esa esencia de 'buena persona' que te define.</p>
+            <!-- HOJA 1: PORTADA -->
+            <div class="page" id="p1">
+                <label class="front cover-cafe" for="c1">
+                    <div class="etiqueta-titulo">
+                        <h1>Para Martha</h1>
+                    </div>
+                </label>
+                <div class="back page-crema">
+                    <!-- Foto inicial a la izquierda al abrir -->
+                    <div class="photo-frame"><img src="../../Fotos/martha.jpeg"></div>
+                </div> 
+            </div>
 
-            <p>Gracias por enseñarme, con tu ejemplo, que no importa qué tan fuerte sople el viento, uno puede elegir ser luz y solución para los suyos. Tu familia tiene mucha suerte de tenerte, porque les estás dando la lección más grande de todas: que la resiliencia y el amor pueden con todo.</p>
-            
-            <p>Espero que hoy recibas de vuelta un poquito de toda esa paz y ayuda que tú siempre brindas a los demás. </p>
-            
-            <p><strong>¡Feliz Día de las Madres, te mereces lo mejor hoy y siempre!</strong></p>
+            <!-- HOJA 2: BLANCO -> PÁRRAFO 1 -->
+            <div class="page" id="p2">
+                <label class="front page-crema" for="c2"></label>
+                <label class="back page-crema" for="c1">
+                    <div class="content">
+                        <p><span class="capitular">Q</span>uerida Martita, en este 10 de mayo, quería dedicarte unas palabras que nacen de la admiración profunda que siento por ti.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 3: PÁRRAFO 2 -> PÁRRAFO 3 -->
+            <div class="page" id="p3">
+                <label class="front page-crema" for="c3">
+                    <div class="content">
+                        <p>Hay personas que pasan por la vida, y hay personas que, como tú, dejan una huella imborrable por su calidad humana y su entereza.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c2">
+                    <div class="content">
+                        <p>Te celebro hoy no solo por ser madre, sino por la mujer increíble que eres. Admiro enormemente esa capacidad que tienes para mantener la calma.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 4: PÁRRAFO 4 -> PÁRRAFO 5 -->
+            <div class="page" id="p4">
+                <label class="front page-crema" for="c4">
+                    <div class="content">
+                        <p>A pesar de los retos que la vida te ha puesto enfrente, siempre buscas la manera de salir adelante con la frente en alto y sin perder tu esencia.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c3">
+                    <div class="content">
+                        <p>Gracias por enseñarme que no importa qué tan fuerte sople el viento, uno puede elegir ser luz y solución para los suyos.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 5: PÁRRAFO 6 -> PÁRRAFO 7 -->
+            <div class="page" id="p5">
+                <label class="front page-crema" for="c5">
+                    <div class="content">
+                        <p>Tu familia tiene mucha suerte de tenerte, porque les estás dando la lección más grande: que la resiliencia y el amor pueden con todo.</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c4">
+                    <div class="content">
+                        <p>Espero que hoy recibas de vuelta un poquito de toda esa paz y ayuda que tú siempre brindas a los demás con tanta bondad.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 6: CIERRE -> FRASE FINAL -->
+            <div class="page" id="p6">
+                <label class="front page-crema" for="c6">
+                    <div class="content">
+                        <p>¡Feliz Día de las Madres, te mereces lo mejor hoy y siempre por ser una mujer tan extraordinaria!</p>
+                    </div>
+                </label>
+                <label class="back page-crema" for="c5">
+                    <div class="content">
+                        <p class="final-izquierda">¡Con todo mi respeto y cariño! 💖</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- HOJA 7: FOTO FINAL -->
+            <div class="page" id="p7">
+                <label class="front cover-cafe" for="c7">
+                    <img src="../../Fotos/martha.jpeg" alt="Foto Final">
+                </label>
+                <label class="back page-crema" for="c6"></label>
+            </div>
+
         </div>
-
-        <!-- IMAGEN (Asegúrate de poner la ruta correcta de la foto) -->
-        <img src="../../Fotos/martha.jpeg" alt="Foto con Martha">
-
     </div>
 
+    <!-- BOTONES -->
+    <div class="button-controls">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
 </div>
 
+<script src="martha.js"></script>
 </body>
 </html>
