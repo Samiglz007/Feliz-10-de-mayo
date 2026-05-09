@@ -1,5 +1,4 @@
 // --- CONFIGURACIÓN DE USUARIOS ---
-// Mantengo exactamente tus datos originales
 const usuarios = {
     "Mama": { password: "1234", pagina: "Usuarios/mama/mama.html" },
     "Nery": { password: "abcd", pagina: "Usuarios/nery/nery.html" },
@@ -21,50 +20,82 @@ const usuarios = {
 
 // --- FUNCIÓN DE LOGIN ---
 function login() {
-    // IMPORTANTE: Eliminé .toLowerCase() para respetar tus mayúsculas/minúsculas
-    let user = document.getElementById("usuario").value.trim();
+
+    // Obtener datos del formulario
+    let user = document.getElementById("usuario").value.trim().toLowerCase();
     let pass = document.getElementById("password").value.trim();
+
     const errorMsg = document.getElementById("error");
     const card = document.querySelector('.login-card');
 
-    // Ahora la comparación es exacta según tu lista
-    if (usuarios[user] && usuarios[user].password === pass) {
-        window.location.href = usuarios[user].pagina;
+    // Buscar usuario ignorando mayúsculas/minúsculas
+    let usuarioEncontrado = null;
+
+    for (let nombre in usuarios) {
+        if (nombre.toLowerCase() === user) {
+            usuarioEncontrado = usuarios[nombre];
+            break;
+        }
+    }
+
+    // Validar acceso
+    if (usuarioEncontrado && usuarioEncontrado.password === pass) {
+
+        errorMsg.innerText = "Acceso correcto 💖";
+
+        setTimeout(() => {
+            window.location.href = usuarioEncontrado.pagina;
+        }, 800);
+
     } else {
+
         errorMsg.innerText = "Datos incorrectos ❌";
+
         card.classList.add('shake');
-        setTimeout(() => card.classList.remove('shake'), 400);
+
+        setTimeout(() => {
+            card.classList.remove('shake');
+        }, 400);
     }
 }
 
 // --- ESCUCHAR TECLA ENTER ---
 document.addEventListener("keypress", function(e) {
+
     if (e.key === "Enter") {
         login();
     }
+
 });
 
 // --- EFECTO DE PÉTALOS CAYENDO ---
 function createPetal() {
+
     const container = document.getElementById('petals-container');
+
     if (!container) return;
 
     const petal = document.createElement('div');
+
     petal.classList.add('petal');
-    
+
     const types = ['🌸', '💕', '🌷', '✨'];
+
     petal.innerText = types[Math.floor(Math.random() * types.length)];
-    
+
     petal.style.left = Math.random() * 100 + 'vw';
     petal.style.fontSize = Math.random() * 15 + 15 + 'px';
     petal.style.opacity = Math.random() * 0.5 + 0.3;
-    
+
     const duration = Math.random() * 3 + 5;
+
     petal.style.animationDuration = duration + 's';
-    
+
     container.appendChild(petal);
-    
-    setTimeout(() => { petal.remove(); }, duration * 1000);
+
+    setTimeout(() => {
+        petal.remove();
+    }, duration * 1000);
 }
 
 setInterval(createPetal, 400);
