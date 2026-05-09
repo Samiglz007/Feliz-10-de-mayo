@@ -2,8 +2,8 @@
 const usuarios = {
     "Mama": { password: "Masha", pagina: "Usuarios/mama/mama.html" },
     "Nery": { password: "Ixpo Mexico", pagina: "Usuarios/nery/nery.html" },
-    "Dianita": { password: "", pagina: "Usuarios/dianita/dianita.html" },
-    "Gaby": { password: "", pagina: "Usuarios/gaby/gaby.html" },
+    "Diana": { password: "Dianita", pagina: "Usuarios/dianita/dianita.html" },
+    "Gabriela": { password: "Gaby", pagina: "Usuarios/gaby/gaby.html" },
     "Martha": { password: "Martita", pagina: "Usuarios/martha/martha.html" },
     "Rosy": { password: "Abuelita Rosy", pagina: "Usuarios/rosy/rosy.html" },
     "Yesenia": { password: "Yess", pagina: "Usuarios/yesenia/yesenia.html" },
@@ -11,11 +11,11 @@ const usuarios = {
     "Fatima": { password: "Ama fati", pagina: "Usuarios/fatima/fatima.html" },
     "Sara": { password: "Lala", pagina: "Usuarios/sara/sara.html" },
     "Abuelita": { password: "Abuelita", pagina: "Usuarios/abuelita/abuelita.html" },
-    "Tere": { password: "", pagina: "Usuarios/tere/tere.html" },
+    "Tere": { password: "Tere", pagina: "Usuarios/tere/tere.html" },
     "Esther": { password: "Infoexpo", pagina: "Usuarios/tt/tt.html" },
     "Mayita": { password: "Dinosaurio", pagina: "Usuarios/zoe/zoe.html" },
     "Leticia": { password: "Para la mejor mamá", pagina: "Usuarios/leticia/leticia.html" },
-    "Sandy": { password: "", pagina: "Usuarios/sandy/sandy.html" }
+    "Sandra": { password: "Sandy", pagina: "Usuarios/sandy/sandy.html" }
 };
 
 // --- FUNCIÓN DE LOGIN ---
