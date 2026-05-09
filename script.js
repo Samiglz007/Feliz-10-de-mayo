@@ -21,30 +21,37 @@ const usuarios = {
 // --- FUNCIÓN DE LOGIN ---
 function login() {
 
-    // Obtener datos del formulario
+    // Obtener datos
     let user = document.getElementById("usuario").value.trim().toLowerCase();
-    let pass = document.getElementById("password").value.trim();
+    let pass = document.getElementById("password").value.trim().toLowerCase();
 
     const errorMsg = document.getElementById("error");
     const card = document.querySelector('.login-card');
 
-    // Buscar usuario ignorando mayúsculas/minúsculas
     let usuarioEncontrado = null;
 
+    // Buscar usuario ignorando mayúsculas/minúsculas
     for (let nombre in usuarios) {
+
         if (nombre.toLowerCase() === user) {
+
             usuarioEncontrado = usuarios[nombre];
             break;
         }
     }
 
-    // Validar acceso
-    if (usuarioEncontrado && usuarioEncontrado.password === pass) {
+    // Validar contraseña
+    if (
+        usuarioEncontrado &&
+        usuarioEncontrado.password.toLowerCase() === pass
+    ) {
 
         errorMsg.innerText = "Acceso correcto 💖";
 
         setTimeout(() => {
+
             window.location.href = usuarioEncontrado.pagina;
+
         }, 800);
 
     } else {
@@ -54,7 +61,9 @@ function login() {
         card.classList.add('shake');
 
         setTimeout(() => {
+
             card.classList.remove('shake');
+
         }, 400);
     }
 }
@@ -94,7 +103,9 @@ function createPetal() {
     container.appendChild(petal);
 
     setTimeout(() => {
+
         petal.remove();
+
     }, duration * 1000);
 }
 
