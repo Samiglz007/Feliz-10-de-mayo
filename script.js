@@ -1,116 +1,43 @@
 // --- CONFIGURACIÓN DE USUARIOS ---
-// Nota: Las claves y passwords están en minúsculas para que el login no falle con mayúsculas.
+// Mantengo exactamente tus datos originales
 const usuarios = {
-    "mama": { 
-        password: "1234", 
-        pagina: "Usuarios/mama/mama.html" 
-    },
-
-    "nery": { 
-        password: "abcd", 
-        pagina: "Usuarios/nery/nery.html" 
-    },
-
-    "dianita": { 
-        password: "1111", 
-        pagina: "Usuarios/dianita/dianita.html" 
-    },
-
-    "gaby": { 
-        password: "2222", 
-        pagina: "Usuarios/gaby/gaby.html" 
-    },
-
-    "martha": { 
-        password: "3333", 
-        pagina: "Usuarios/martha/martha.html" 
-    },
-
-    "rosy": { 
-        password: "4444", 
-        pagina: "Usuarios/rosy/rosy.html" 
-    },
-
-    "yesenia": { 
-        password: "5555", 
-        pagina: "Usuarios/yesenia/yesenia.html" 
-    },
-
-    "yulissa": { 
-        password: "6666", 
-        pagina: "Usuarios/yulissa/yulissa.html" 
-    },
-
-    "fatima": { 
-        password: "7777", 
-        pagina: "Usuarios/fatima/fatima.html" 
-    },
-
-    "sara": { 
-        password: "8888", 
-        pagina: "Usuarios/sara/sara.html" 
-    },
-
-    "abuelita": { 
-        password: "9999", 
-        pagina: "Usuarios/abuelita/abuelita.html" 
-    },
-
-    "tere": { 
-        password: "1010", 
-        pagina: "Usuarios/tere/tere.html" 
-    },
-
-    "esther": { 
-        password: "2020", 
-        pagina: "Usuarios/tt/tt.html" 
-    },
-
-    "mayita": { 
-        password: "Dinosaurio", 
-        pagina: "Usuarios/zoe/zoe.html" 
-    },
-
-    "leticia": { 
-        password: "5050", 
-        pagina: "Usuarios/leticia/leticia.html" 
-    },
-
-    "sandy": { 
-        password: "6161", 
-        pagina: "Usuarios/sandy/sandy.html" 
-    }
+    "Mama": { password: "1234", pagina: "Usuarios/mama/mama.html" },
+    "Nery": { password: "abcd", pagina: "Usuarios/nery/nery.html" },
+    "Dianita": { password: "1111", pagina: "Usuarios/dianita/dianita.html" },
+    "Gaby": { password: "2222", pagina: "Usuarios/gaby/gaby.html" },
+    "Martha": { password: "3333", pagina: "Usuarios/martha/martha.html" },
+    "Rosy": { password: "4444", pagina: "Usuarios/rosy/rosy.html" },
+    "Yesenia": { password: "5555", pagina: "Usuarios/yesenia/yesenia.html" },
+    "Yulissa": { password: "6666", pagina: "Usuarios/yulissa/yulissa.html" },
+    "Fatima": { password: "7777", pagina: "Usuarios/fatima/fatima.html" },
+    "Sara": { password: "8888", pagina: "Usuarios/sara/sara.html" },
+    "Abuelita": { password: "9999", pagina: "Usuarios/abuelita/abuelita.html" },
+    "Tere": { password: "1010", pagina: "Usuarios/tere/tere.html" },
+    "Esther": { password: "2020", pagina: "Usuarios/tt/tt.html" },
+    "Mayita": { password: "Dinosaurio", pagina: "Usuarios/zoe/zoe.html" },
+    "Leticia": { password: "5050", pagina: "Usuarios/leticia/leticia.html" },
+    "Sandy": { password: "6161", pagina: "Usuarios/sandy/sandy.html" }
 };
 
 // --- FUNCIÓN DE LOGIN ---
 function login() {
-    const userField = document.getElementById("usuario");
-    const passField = document.getElementById("password");
+    // IMPORTANTE: Eliminé .toLowerCase() para respetar tus mayúsculas/minúsculas
+    let user = document.getElementById("usuario").value.trim();
+    let pass = document.getElementById("password").value.trim();
     const errorMsg = document.getElementById("error");
     const card = document.querySelector('.login-card');
 
-    let user = userField.value.toLowerCase().trim();
-    let pass = passField.value.toLowerCase().trim();
-
+    // Ahora la comparación es exacta según tu lista
     if (usuarios[user] && usuarios[user].password === pass) {
-        // Éxito: Redirigir
         window.location.href = usuarios[user].pagina;
     } else {
-        // Error: Efecto visual y mensaje
         errorMsg.innerText = "Datos incorrectos ❌";
         card.classList.add('shake');
-        
-        // Limpiar password para reintentar
-        passField.value = "";
-        
-        setTimeout(() => {
-            card.classList.remove('shake');
-        }, 400);
+        setTimeout(() => card.classList.remove('shake'), 400);
     }
 }
 
 // --- ESCUCHAR TECLA ENTER ---
-// Esto permite que el usuario entre sin tener que hacer clic, solo dando Enter
 document.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         login();
@@ -120,7 +47,7 @@ document.addEventListener("keypress", function(e) {
 // --- EFECTO DE PÉTALOS CAYENDO ---
 function createPetal() {
     const container = document.getElementById('petals-container');
-    if (!container) return; // Evita errores si el contenedor no existe
+    if (!container) return;
 
     const petal = document.createElement('div');
     petal.classList.add('petal');
@@ -137,10 +64,7 @@ function createPetal() {
     
     container.appendChild(petal);
     
-    setTimeout(() => { 
-        petal.remove(); 
-    }, duration * 1000);
+    setTimeout(() => { petal.remove(); }, duration * 1000);
 }
 
-// Iniciar animación de pétalos
 setInterval(createPetal, 400);
