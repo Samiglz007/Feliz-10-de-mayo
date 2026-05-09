@@ -1,21 +1,21 @@
 // --- CONFIGURACIÓN DE USUARIOS ---
 const usuarios = {
-    "Mama": { password: "1234", pagina: "Usuarios/mama/mama.html" },
-    "Nery": { password: "abcd", pagina: "Usuarios/nery/nery.html" },
-    "Dianita": { password: "1111", pagina: "Usuarios/dianita/dianita.html" },
-    "Gaby": { password: "2222", pagina: "Usuarios/gaby/gaby.html" },
-    "Martha": { password: "3333", pagina: "Usuarios/martha/martha.html" },
-    "Rosy": { password: "4444", pagina: "Usuarios/rosy/rosy.html" },
-    "Yesenia": { password: "5555", pagina: "Usuarios/yesenia/yesenia.html" },
-    "Yulissa": { password: "6666", pagina: "Usuarios/yulissa/yulissa.html" },
-    "Fatima": { password: "7777", pagina: "Usuarios/fatima/fatima.html" },
-    "Sara": { password: "8888", pagina: "Usuarios/sara/sara.html" },
-    "Abuelita": { password: "9999", pagina: "Usuarios/abuelita/abuelita.html" },
-    "Tere": { password: "1010", pagina: "Usuarios/tere/tere.html" },
-    "Esther": { password: "2020", pagina: "Usuarios/tt/tt.html" },
+    "Mama": { password: "Masha", pagina: "Usuarios/mama/mama.html" },
+    "Nery": { password: "Ixpo Mexico", pagina: "Usuarios/nery/nery.html" },
+    "Dianita": { password: "", pagina: "Usuarios/dianita/dianita.html" },
+    "Gaby": { password: "", pagina: "Usuarios/gaby/gaby.html" },
+    "Martha": { password: "Martita", pagina: "Usuarios/martha/martha.html" },
+    "Rosy": { password: "Abuelita Rosy", pagina: "Usuarios/rosy/rosy.html" },
+    "Yesenia": { password: "Yess", pagina: "Usuarios/yesenia/yesenia.html" },
+    "Yulissa": { password: "Yuli", pagina: "Usuarios/yulissa/yulissa.html" },
+    "Fatima": { password: "Ama fati", pagina: "Usuarios/fatima/fatima.html" },
+    "Sara": { password: "Lala", pagina: "Usuarios/sara/sara.html" },
+    "Abuelita": { password: "Abuelita", pagina: "Usuarios/abuelita/abuelita.html" },
+    "Tere": { password: "", pagina: "Usuarios/tere/tere.html" },
+    "Esther": { password: "Infoexpo", pagina: "Usuarios/tt/tt.html" },
     "Mayita": { password: "Dinosaurio", pagina: "Usuarios/zoe/zoe.html" },
-    "Leticia": { password: "5050", pagina: "Usuarios/leticia/leticia.html" },
-    "Sandy": { password: "6161", pagina: "Usuarios/sandy/sandy.html" }
+    "Leticia": { password: "Para la mejor mamá", pagina: "Usuarios/leticia/leticia.html" },
+    "Sandy": { password: "", pagina: "Usuarios/sandy/sandy.html" }
 };
 
 // --- FUNCIÓN DE LOGIN ---
