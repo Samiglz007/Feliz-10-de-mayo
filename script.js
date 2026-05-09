@@ -6,82 +6,82 @@ function login() {
     const card = document.querySelector('.login-card');
 
     const usuarios = {
-        "mama": { 
+        "Mama": { 
             password: "1234", 
             pagina: "Usuarios/mama/mama.html" 
         },
 
-        "nery": { 
+        "Nery": { 
             password: "abcd", 
             pagina: "Usuarios/nery/nery.html" 
         },
 
-        "dianita": { 
+        "Dianita": { 
             password: "1111", 
             pagina: "Usuarios/dianita/dianita.html" 
         },
 
-        "gaby": { 
+        "Gaby": { 
             password: "2222", 
             pagina: "Usuarios/gaby/gaby.html" 
         },
 
-        "martha": { 
+        "Martha": { 
             password: "3333", 
             pagina: "Usuarios/martha/martha.html" 
         },
 
-        "rosy": { 
+        "Rosy": { 
             password: "4444", 
             pagina: "Usuarios/rosy/rosy.html" 
         },
 
-        "yesenia": { 
+        "Yesenia": { 
             password: "5555", 
             pagina: "Usuarios/yesenia/yesenia.html" 
         },
 
-        "yulisa": { 
+        "Yulissa": { 
             password: "6666", 
             pagina: "Usuarios/yulissa/yulissa.html" 
         },
 
-        "fatima": { 
+        "Fatima": { 
             password: "7777", 
             pagina: "Usuarios/fatima/fatima.html" 
         },
 
-        "sara": { 
+        "Sara": { 
             password: "8888", 
             pagina: "Usuarios/sara/sara.html" 
         },
 
-        "abuelita": { 
+        "Abuelita": { 
             password: "9999", 
             pagina: "Usuarios/abuelita/abuelita.html" 
         },
 
-        "tere": { 
+        "Tere": { 
             password: "1010", 
             pagina: "Usuarios/tere/tere.html" 
         },
 
-        "tete": { 
+        "Esther": { 
             password: "2020", 
             pagina: "Usuarios/tt/tt.html" 
         },
 
-        "mayita": { 
-            password: "3030", 
+        "Mayita": { 
+            password: "Dinosaurio-En-Patineta-88?", 
             pagina: "Usuarios/zoe/zoe.html" 
         },
 
-        "leticia":{
+        "Leticia":{
             password:"5050",
             pagina:"Usuarios/leticia/leticia.html"
         },
 
-        "sandy":{
+        "Sandy":{
             password:"6161",
             pagina:"Usuarios/sandy/sandy.html"
         }
