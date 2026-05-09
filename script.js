@@ -72,7 +72,7 @@ function login() {
         },
 
         "Mayita": { 
-            password: "Dinosaurio En Patineta 88", 
+            password: "Dinosaurio", 
             pagina: "Usuarios/zoe/zoe.html" 
         },
 
