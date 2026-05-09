@@ -7,7 +7,7 @@ function login() {
 
     const usuarios = {
         "Mama": { 
-            password: "mama", 
+            password: "1234", 
             pagina: "Usuarios/mama/mama.html" 
         },
 
