@@ -42,40 +42,13 @@
 
     </div>
 
-    <!-- MÚSICA DE FONDO -->
-    <audio id="musica" autoplay loop hidden>
-        <source src="musica/cancion.mp3" type="audio/mp3">
+    <!-- MÚSICA -->
+    <audio id="musica" loop hidden>
+        <source src="musica/musica.mp3" type="audio/mpeg">
     </audio>
 
     <!-- SCRIPT PRINCIPAL -->
     <script src="script.js"></script>
-
-    <!-- SCRIPT DE MÚSICA -->
-    <script>
-
-        const musica = document.getElementById("musica");
-
-        // Recuperar tiempo guardado
-        window.addEventListener("load", () => {
-
-            const tiempoGuardado = localStorage.getItem("musicaTiempo");
-
-            if (tiempoGuardado) {
-                musica.currentTime = parseFloat(tiempoGuardado);
-            }
-
-            musica.play();
-
-        });
-
-        // Guardar tiempo actual
-        setInterval(() => {
-
-            localStorage.setItem("musicaTiempo", musica.currentTime);
-
-        }, 1000);
-
-    </script>
 
 </body>
 </html>

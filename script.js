@@ -48,11 +48,34 @@ function login() {
 
         errorMsg.innerText = "Acceso correcto 💖";
 
+        // REPRODUCIR MÚSICA
+        const musica = document.getElementById("musica");
+
+        // Recuperar tiempo guardado
+        const tiempoGuardado = localStorage.getItem("musicaTiempo");
+
+        if (tiempoGuardado) {
+            musica.currentTime = parseFloat(tiempoGuardado);
+        }
+
+        // Iniciar música
+        musica.play();
+
+        // Guardar que la música está activa
+        localStorage.setItem("musicaActiva", "true");
+
+        // Guardar tiempo constantemente
+        setInterval(() => {
+
+            localStorage.setItem("musicaTiempo", musica.currentTime);
+
+        }, 1000);
+
         setTimeout(() => {
 
             window.location.href = usuarioEncontrado.pagina;
 
-        }, 800);
+        }, 1000);
 
     } else {
 
