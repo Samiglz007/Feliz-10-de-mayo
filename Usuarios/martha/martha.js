@@ -38,30 +38,34 @@ document.querySelectorAll('input[type="checkbox"]').forEach(check => {
 const audioLibro = new Audio('../../musica/musica.mp3');
 audioLibro.loop = true;
 
-window.addEventListener('load', () => {
-    if (localStorage.getItem('musicaIniciada') === 'true') {
-        
-        // Recuperamos el tiempo guardado
+// Función única para arrancar el audio
+function forzarMusica() {
+    if (audioLibro.paused) {
         const savedTime = localStorage.getItem('currentTime');
         if (savedTime) {
             audioLibro.currentTime = parseFloat(savedTime);
         }
+        audioLibro.play();
+    }
+}
 
-        // Intentamos reproducir de inmediato
-        audioLibro.play().catch(() => {
-            // Si el navegador bloquea el auto-play por seguridad, 
-            // sonará en cuanto toquen el libro (c1)
-            const abrirLibro = document.getElementById('c1');
-            if (abrirLibro) {
-                abrirLibro.addEventListener('change', () => {
-                    audioLibro.play();
-                }, { once: true });
-            }
-        });
+// 1. Intento automático al cargar
+window.addEventListener('load', () => {
+    if (localStorage.getItem('musicaIniciada') === 'true') {
+        intentarReproducir();
     }
 });
 
-// Sincronización continua: guarda el tiempo cada segundo
+function intentarReproducir() {
+    audioLibro.play().catch(() => {
+        // 2. Si falla, se activa con CUALQUIER interacción en la página
+        // Esto incluye el clic que el usuario hará para pasar la primera hoja
+        document.addEventListener('click', forzarMusica, { once: true });
+        document.addEventListener('keydown', forzarMusica, { once: true });
+    });
+}
+
+// Sincronización de tiempo para que no se pierda el segundo al navegar
 setInterval(() => {
     if (!audioLibro.paused) {
         localStorage.setItem('currentTime', audioLibro.currentTime);
