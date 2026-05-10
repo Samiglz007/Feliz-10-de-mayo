@@ -134,18 +134,7 @@ function createPetal() {
 
 setInterval(createPetal, 400);
 
-const audioPrincipal = new Audio('musica/musica.mp3');
-audioPrincipal.loop = true;
-
 function entrarAlLibro(urlDestino) {
-    // Guardamos el segundo exacto antes de salir
-    localStorage.setItem('musicaIniciada', 'true');
-    localStorage.setItem('currentTime', audioPrincipal.currentTime);
-    
-    // Reproducimos un instante para asegurar el permiso y saltamos
-    audioPrincipal.play().then(() => {
-        window.location.href = urlDestino;
-    }).catch(() => {
-        window.location.href = urlDestino;
-    });
+    // Solo redirigimos. El sonido lo activará el usuario al abrir el libro.
+    window.location.href = urlDestino;
 }

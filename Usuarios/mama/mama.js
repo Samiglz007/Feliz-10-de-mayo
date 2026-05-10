@@ -37,39 +37,18 @@ document.querySelectorAll('input[type="checkbox"]').forEach(check => {
     check.addEventListener('change', checkBookPosition);
 });
 
-const audioLibro = new Audio('../../musica/musica.mp3');
-audioLibro.loop = true;
+const audio = new Audio('../../musica/musica.mp3');
+audio.loop = true;
 
-// Función única para arrancar el audio
-function forzarMusica() {
-    if (audioLibro.paused) {
-        const savedTime = localStorage.getItem('currentTime');
-        if (savedTime) {
-            audioLibro.currentTime = parseFloat(savedTime);
-        }
-        audioLibro.play();
-    }
-}
-
-// 1. Intento automático al cargar
-window.addEventListener('load', () => {
-    if (localStorage.getItem('musicaIniciada') === 'true') {
-        intentarReproducir();
+document.addEventListener('DOMContentLoaded', () => {
+    const botonAbrir = document.getElementById('c1');
+    
+    if (botonAbrir) {
+        botonAbrir.addEventListener('change', () => {
+            // En cuanto el usuario abre la portada, la música arranca
+            if (botonAbrir.checked) {
+                audio.play().catch(e => console.log("El navegador requiere interacción"));
+            }
+        });
     }
 });
-
-function intentarReproducir() {
-    audioLibro.play().catch(() => {
-        // 2. Si falla, se activa con CUALQUIER interacción en la página
-        // Esto incluye el clic que el usuario hará para pasar la primera hoja
-        document.addEventListener('click', forzarMusica, { once: true });
-        document.addEventListener('keydown', forzarMusica, { once: true });
-    });
-}
-
-// Sincronización de tiempo para que no se pierda el segundo al navegar
-setInterval(() => {
-    if (!audioLibro.paused) {
-        localStorage.setItem('currentTime', audioLibro.currentTime);
-    }
-}, 1000);
