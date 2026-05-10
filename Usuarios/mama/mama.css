@@ -22,7 +22,9 @@ body {
     transition: transform 1s ease-in-out;
 }
 
-input { display: none; }
+input {
+    display: none;
+}
 
 .book {
     width: 100%;
@@ -40,7 +42,8 @@ input { display: none; }
     transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.front, .back {
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -51,8 +54,14 @@ input { display: none; }
     box-shadow: inset 3px 0 15px rgba(0,0,0,0.1);
 }
 
-.page-crema { background: #fffef0; border: 1px solid #dcd1b3; }
-.back { transform: rotateY(180deg); }
+.page-crema {
+    background: #fffef0;
+    border: 1px solid #dcd1b3;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
 
 .cover-cafe {
     background: #5d4037;
@@ -78,9 +87,28 @@ input { display: none; }
     color: #3e2723;
 }
 
-.content { height: 100%; display: flex; align-items: center; justify-content: center; }
-p { text-align: justify; line-height: 1.8; font-size: 19px; color: #3e2723; margin: 0; }
-.capitular { float: left; font-family: "Segoe Script", cursive; font-size: 55px; color: #5d4037; margin-right: 10px; }
+.content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 19px;
+    color: #3e2723;
+    margin: 0;
+}
+
+.capitular {
+    float: left;
+    font-family: "Segoe Script", cursive;
+    font-size: 55px;
+    color: #5d4037;
+    margin-right: 10px;
+}
 
 .final-izquierda {
     font-family: "Segoe Script", "Apple Chancery", cursive;
@@ -91,23 +119,74 @@ p { text-align: justify; line-height: 1.8; font-size: 19px; color: #3e2723; marg
     font-style: italic;
 }
 
-img { width: 100%; height: 100%; object-fit: cover; }
-.photo-frame { width: 100%; height: 100%; border: 5px solid #f3e5ab; }
+/* FOTO */
+.photo-frame{
+    width: 100%;
+    height: 430px;
+    border: 5px solid #f3e5ab;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.photo-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /* Giros y Capas */
-#c1:checked ~ .book #p1 { transform: rotateY(-180deg); z-index: 10; }
-#c2:checked ~ .book #p2 { transform: rotateY(-180deg); z-index: 11; }
-#c3:checked ~ .book #p3 { transform: rotateY(-180deg); z-index: 12; }
-#c4:checked ~ .book #p4 { transform: rotateY(-180deg); z-index: 13; }
-#c5:checked ~ .book #p5 { transform: rotateY(-180deg); z-index: 14; }
-#c6:checked ~ .book #p6 { transform: rotateY(-180deg); z-index: 15; }
-#c7:checked ~ .book #p7 { transform: rotateY(-180deg); z-index: 16; }
+#c1:checked ~ .book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 10;
+}
 
-#p1 { z-index: 7; } #p2 { z-index: 6; } #p3 { z-index: 5; }
-#p4 { z-index: 4; } #p5 { z-index: 3; } #p6 { z-index: 2; }
+#c2:checked ~ .book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 11;
+}
+
+#c3:checked ~ .book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 12;
+}
+
+#c4:checked ~ .book #p4 {
+    transform: rotateY(-180deg);
+    z-index: 13;
+}
+
+#c5:checked ~ .book #p5 {
+    transform: rotateY(-180deg);
+    z-index: 14;
+}
+
+#c6:checked ~ .book #p6 {
+    transform: rotateY(-180deg);
+    z-index: 15;
+}
+
+#c7:checked ~ .book #p7 {
+    transform: rotateY(-180deg);
+    z-index: 16;
+}
+
+#p1 { z-index: 7; }
+#p2 { z-index: 6; }
+#p3 { z-index: 5; }
+#p4 { z-index: 4; }
+#p5 { z-index: 3; }
+#p6 { z-index: 2; }
 #p7 { z-index: 1; }
 
-.button-controls { display: flex; gap: 20px; }
+.button-controls {
+    display: flex;
+    gap: 20px;
+}
+
 button {
     padding: 10px 25px;
     background: #5d4037;
