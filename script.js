@@ -138,12 +138,14 @@ const audioPrincipal = new Audio('musica/musica.mp3');
 audioPrincipal.loop = true;
 
 function entrarAlLibro(urlDestino) {
+    // Guardamos el segundo exacto antes de salir
+    localStorage.setItem('musicaIniciada', 'true');
+    localStorage.setItem('currentTime', audioPrincipal.currentTime);
+    
+    // Reproducimos un instante para asegurar el permiso y saltamos
     audioPrincipal.play().then(() => {
-        localStorage.setItem('musicaIniciada', 'true');
-        // GUARDAMOS EL TIEMPO ACTUAL
-        localStorage.setItem('currentTime', audioPrincipal.currentTime); 
         window.location.href = urlDestino;
-    }).catch(error => {
+    }).catch(() => {
         window.location.href = urlDestino;
     });
 }

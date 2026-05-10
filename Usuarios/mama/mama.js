@@ -43,21 +43,27 @@ audioLibro.loop = true;
 window.addEventListener('load', () => {
     if (localStorage.getItem('musicaIniciada') === 'true') {
         
-        // RECUPERAMOS EL TIEMPO GUARDADO
+        // Recuperamos el tiempo guardado
         const savedTime = localStorage.getItem('currentTime');
         if (savedTime) {
             audioLibro.currentTime = parseFloat(savedTime);
         }
 
+        // Intentamos reproducir de inmediato
         audioLibro.play().catch(() => {
-            document.getElementById('c1').addEventListener('change', () => {
-                audioLibro.play();
-            }, { once: true });
+            // Si el navegador bloquea el auto-play por seguridad, 
+            // sonará en cuanto toquen el libro (c1)
+            const abrirLibro = document.getElementById('c1');
+            if (abrirLibro) {
+                abrirLibro.addEventListener('change', () => {
+                    audioLibro.play();
+                }, { once: true });
+            }
         });
     }
 });
 
-// OPCIONAL: Guardar el tiempo cada segundo por si navegan entre libros
+// Sincronización continua: guarda el tiempo cada segundo
 setInterval(() => {
     if (!audioLibro.paused) {
         localStorage.setItem('currentTime', audioLibro.currentTime);
