@@ -39,14 +39,29 @@ document.querySelectorAll('input[type="checkbox"]').forEach(check => {
 const audioLibro = new Audio('../../musica/musica.mp3');
 audioLibro.loop = true;
 
+const audioLibro = new Audio('../../musica/musica.mp3');
+audioLibro.loop = true;
+
 window.addEventListener('load', () => {
-    // Si el interruptor de música está encendido, la activamos
     if (localStorage.getItem('musicaIniciada') === 'true') {
+        
+        // RECUPERAMOS EL TIEMPO GUARDADO
+        const savedTime = localStorage.getItem('currentTime');
+        if (savedTime) {
+            audioLibro.currentTime = parseFloat(savedTime);
+        }
+
         audioLibro.play().catch(() => {
-            // Si el navegador la frena, sonará al abrir la portada (c1)
             document.getElementById('c1').addEventListener('change', () => {
                 audioLibro.play();
             }, { once: true });
         });
     }
 });
+
+// OPCIONAL: Guardar el tiempo cada segundo por si navegan entre libros
+setInterval(() => {
+    if (!audioLibro.paused) {
+        localStorage.setItem('currentTime', audioLibro.currentTime);
+    }
+}, 1000);
