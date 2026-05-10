@@ -30,3 +30,19 @@ prevBtn.addEventListener('click', () => {
         checkBookPosition();
     }
 });
+
+// Subimos dos niveles para encontrar la música global
+const audioLibro = new Audio('../../musica/musica.mp3');
+audioLibro.loop = true;
+
+window.addEventListener('load', () => {
+    // Si el interruptor de música está encendido, la activamos
+    if (localStorage.getItem('musicaIniciada') === 'true') {
+        audioLibro.play().catch(() => {
+            // Si el navegador la frena, sonará al abrir la portada (c1)
+            document.getElementById('c1').addEventListener('change', () => {
+                audioLibro.play();
+            }, { once: true });
+        });
+    }
+});
